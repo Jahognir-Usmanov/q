@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <!-- <link rel="stylesheet" href="./CSS/about.css"> -->
+    <link rel="website icon" href="./img/usmanov_law_firm__4_-removebg-preview.png" type="png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        #license-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            padding: 20px;
+            z-index: 50;
+            max-width: 90%;
+        }
+
+        #license-popup img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        #close-btn {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .about_nav {
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            margin-bottom: 400px;
+            background: linear-gradient(to bottom, rgba(9, 5, 47, 0.7), rgba(9, 5, 47, 0.7)), url('../img/сверху\ картинка\ \(1\)\ \(1\).jpg');
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .breadcrumb {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
+
+        .breadcrumb-item {
+            margin-right: 0.5rem;
+        }
+
+        .breadcrumb-item + .breadcrumb-item::before {
+            content: '/';
+            margin-right: 0.8rem;
+        }
+
+        .breadcrumb-item a {
+            text-decoration: none;
+            color: #09f9e9;
+        }
+
+        .breadcrumb-item a:hover {
+            color: #068f86;
+            text-decoration: underline;
+        }
+
+        .breadcrumb-item.active {
+            color: gray;
+        }
+
+        /* Адаптивные стили */
+        @media (max-width: 768px) {
+            .about_nav {
+                flex-direction: column;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .breadcrumb-item a {
+                font-size: 0.9em;
+            }
+        }
+
+        h3 {
+            color: #0a91af;
+        }
+        footer {
+            margin-top: 0px!important;
+            font-family: "Merriweather", serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Навигация -->
+    <div class="about_nav">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Главная</a></li>
+                <li class="breadcrumb-item active" aria-current="page">О нас</li>
+            </ol>
+        </nav>
+    </div>
+
+    <!-- Основной контент -->
+    <main class="container mx-auto px-6 py-12 space-y-16">
+
+        <!-- О компании -->
+        <!-- <h2 style="color: #0a91af; margin: 40px;" class="text-4xl font-bold text-center text-gray-800 mb-4">О нас:</h2> -->
+        <section id="about-us" class="space-y-16" style="margin-top: 80px;">
+            <article class="space-y-6">
+                <h3 class="text-3xl font-semibold">Law Office Usmanov</h3>
+                <p class="text-lg leading-relaxed text-gray-700">Адвокатская фирма <strong>Law Office Usmanov</strong> была основана с целью предоставить клиентам высококвалифицированную юридическую помощь и защиту их интересов. Мы стремимся быть лидерами в юридической отрасли, предоставляя услуги на самых высоких стандартах профессионализма и этики.</p>
+                <div class="text-center">
+                    <button id="show-license-btn" style="background-color: #0a91af;" class="text-white font-bold py-3 px-6 rounded-full shadow-lg transform transition duration-300 hover:scale-105 focus:ring-4 focus:ring-teal-300 focus:outline-none">
+                        Посмотреть лицензию
+                    </button>
+                </div>
+                <div id="license-popup" class="popup">
+                    <span id="close-btn" class="close">&times;</span>
+                    <img src="./img/photo_2024-07-27 23.05.50.jpeg" alt="Лицензия">
+                </div>
+            </article>
+            <div class="border-b-2 border-gray-300 border-dashed"></div>
+
+        </section>
+
+        <!-- Наши ценности -->
+        <section class="space-y-16">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-semibold">Наши ценности</h3>
+                <ul class="list-disc pl-6 text-gray-700 space-y-3">
+                    <li><strong>Профессионализм:</strong> Мы предоставляем только высококачественные юридические услуги.</li>
+                    <li><strong>Индивидуальный подход:</strong> Каждый клиент для нас уникален, и мы разрабатываем решения, которые наилучшим образом соответствуют их потребностям.</li>
+                    <li><strong>Честность и этика:</strong> Мы верим в прозрачные и честные отношения с нашими клиентами.</li>
+                    <li><strong>Ответственность:</strong> Мы осознаем свою ответственность перед клиентами и обществом и стремимся к справедливости и законности.</li>
+                </ul>
+            </div>
+        </section>
+        <div class="border-b-2 border-gray-300 border-dashed"></div>
+
+        <!-- Наша команда -->
+        <section class="space-y-16">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-semibold">Наша команда</h3>
+                <p class="text-lg leading-relaxed text-gray-700">Мы гордимся нашей командой профессионалов, которая является движущей силой нашего успеха. Каждый адвокат и сотрудник <strong>Law Office Usmanov</strong> вносит свой уникальный вклад в развитие фирмы, и вместе мы работаем над достижением общих целей.</p>
+                <p class="text-lg leading-relaxed text-gray-700">Наши специалисты обладают глубокими знаниями и опытом в различных областях права, что позволяет нам предлагать клиентам лучшие юридические решения.</p>
+            </div>
+        </section>
+        <div class="border-b-2 border-gray-300 border-dashed"></div>
+
+        <!-- Наша миссия -->
+        <section class="space-y-16">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-semibold">Наша миссия</h3>
+                <p class="text-lg leading-relaxed text-gray-700">Наша миссия - предоставлять клиентам высококачественные юридические услуги, защищать их права и интересы, а также способствовать справедливости и законности.</p>
+            </div>
+        </section>
+          <div class="border-b-2 border-gray-300 border-dashed"></div>
+
+        <!-- Контакты -->
+        <section class="space-y-16">
+            <div class="space-y-6">
+                <h3 class="text-3xl font-semibold">Контакты</h3>
+                <p class="text-lg leading-relaxed text-gray-700">Если у вас есть вопросы или вы хотите узнать больше о нашей фирме, пожалуйста, свяжитесь с нами:</p>
+                <p class="text-lg leading-relaxed text-gray-700"><strong>Адрес:</strong> Узбекистан, г.Ташкент, ул. Мирабад, 2, Mirabad Plaza</p>
+                <p class="text-lg leading-relaxed text-gray-700"><strong>Номер телефона:</strong> <a href="tel:+998-97-002-00-44" style="color: #0a91af;" class="hover:underline">+998-97-002-00-44</a></p>
+                <p class="text-lg leading-relaxed text-gray-700"><strong>Электронная почта:</strong> <a style="color: #0a91af;" class="hover:underline" href="mailto:Law Office Usmanov">af.usmn@gmail.com</a></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer id="contacts" class="footer">
+
+        <div class="consultation-form">
+          <h2 data-ru="Получить консультацию" data-en="Get a consultation">Получить консультацию</h2>
+          <p data-ru="мы с вами свяжемся в течении суток" data-en="we will contact you within 24 hours">мы с вами свяжемся в течении суток</p>
+          <form id="form" action="https://api.web3forms.com/submit" method="POST">
+    
+            <input type="hidden" name="access_key" value="cd9c0107-87dc-42aa-ba67-76f39bce6f60">
+    
+            <input type="hidden" name="redirect" value="">
+    
+              <div class="form-group">
+                  <input type="text" name="Имя:" required minlength="2" maxlength="50" data-ru="Введите ваше имя" data-en="Enter your name" placeholder="Введите ваше имя">
+                  <!-- <input type="tel" name="Телефон:" placeholder="+998 (9_) ___-__-__" required> -->
+                  <input type="email" name="Почта:" required placeholder="Введите ваш email" data-ru="Введите ваш email" data-en="Enter your email">
+                  <input type="text" name="Сообщение:" placeholder="Задайте любой вопрос" data-ru="Задайте любой вопрос" data-en="Ask any question">
+              </div>
+              
+              <button data-ru="Отправить" data-en="Submit" type="submit">Отправить</button>
+    
+              <div class="checkbox-group">
+                  <input type="checkbox" id="consent" required>
+                  <label for="consent"><a data-ru="Я согласен(на) с политикой конфиденциальности" data-en="I agree with the privacy policy" href="info.html">Я согласен(на) с политикой конфиденциальности</a></label>
+              </div>
+    
+              <div id="successMessage" class="success-message">Форма успешно отправлена!</div>
+    
+          </form>
+      </div>
+    </footer>
+
+    <script>
+
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault(); // предотвращаем стандартную отправку формы
+        
+            var form = event.target;
+            var formData = new FormData(form);
+        
+            fetch(form.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    // Показываем всплывающее сообщение об успешной отправке
+                    var successMessage = document.getElementById('successMessage');
+                    successMessage.classList.add('show');
+        
+                    // Скрываем сообщение через 3 секунды
+                    setTimeout(function() {
+                        successMessage.classList.remove('show');
+                    }, 3000);
+        
+                    // Очищаем форму после успешной отправки
+                    form.reset();
+                } else {
+                    alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова.');
+                }
+            })
+            .catch(error => {
+                alert('Произошла ошибка при отправке формы. Пожалуйста, попробуйте снова.');
+                console.error('Ошибка:', error);
+            });
+        });
+        
+        </script>
+
+    <script>
+        document.getElementById('show-license-btn').addEventListener('click', function() {
+            document.getElementById('license-popup').style.display = 'block';
+        });
+
+        document.getElementById('close-btn').addEventListener('click', function() {
+            document.getElementById('license-popup').style.display = 'none';
+        });
+    </script>
+
+</body>
+</html>
