@@ -1,0 +1,258 @@
+/* Стили для всего сайта */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+
+.about_nav {
+    position: fixed;
+    width: 100%;
+    margin-bottom: 400px;
+    /* background-color: rgba(0, 0, 0, 0.411); */
+    background: linear-gradient(to bottom, rgba(9, 5, 47, 0.7), rgba(9, 5, 47, 0.7)), url('../img/сверху\ картинка\ \(1\)\ \(1\).jpg');
+    display: flex;
+    flex-direction: column;
+}
+
+.about_nav a:hover {
+    color: #00e0d0;
+}
+
+@media (max-width: 768px) {
+
+.screen_about {
+    
+  }
+  
+}
+
+
+.about_nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.about_nav nav {
+    margin-top: 20px;
+    padding: 20px;
+
+}
+
+/* .about_nav nav a {
+    color: #FFFF;
+    font-family: 'Roboto';
+    font-size: 14px; 
+    letter-spacing: 1px;
+    text-decoration: none;
+    margin: 0 15px;
+} */
+
+/* @media (max-width: 768px) {
+    header .about_nav nav a {
+        
+  }
+} */
+
+.screen_about .about_nav nav a:hover {
+    color: #00e0d0;
+    padding: 8px;
+    transition: all 0.5s ease;
+
+}
+
+
+#about-us h2 {
+    color: #00e0d0;
+}
+
+/* Стили для основного контента */
+main {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 20px auto;
+    margin-top: 100px;
+    background: #fff;
+    box-shadow: 0 0 10px #09052f;
+}
+
+section#about-us h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section#about-us article {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-left: 5px solid #0a91af;
+}
+
+section#about-us article {
+    color: #085769;
+}
+
+section#about-us h3 {
+    margin-top: 0;
+}
+
+/* Стили для списка */
+section#about-us ul {
+    list-style: none;
+    padding: 0;
+}
+
+section#about-us ul li {
+    background: url('bullet.png') no-repeat left center;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* Стили для ссылок */
+a {
+    flex-wrap: nowrap;
+    color: #FFFF;
+    padding: 0 15px;
+
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Стили для футера */
+footer {
+    background-color: #09052f;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    section#about-us article {
+        padding: 10px;
+    }
+
+    section#about-us ul li {
+        padding-left: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    section#about-us h2 {
+        font-size: 1.5em;
+    }
+
+    section#about-us article {
+        padding: 5px;
+        border-left: 3px solid  #0a91af;
+    }
+
+    footer {
+        font-size: 0.8em;
+    }
+}
+
+.breadcrumb {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .breadcrumb-item {
+    margin-right: 0.5rem;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+    margin-right: 0.8rem;
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: #09f9e9;
+  }
+
+  .breadcrumb-item a:hover {
+    color: #068f86;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-item.active {
+    /* color: #6c757d; */
+    color: gray;
+  }
+
+  .screen_about_email {
+    color: #068f86;
+  }
+
+  .popup {
+    display: none; /* Скрываем popup по умолчанию */
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); /* Полупрозрачный фон */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup img {
+    width: 400px;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+}
+
+#show-license-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #00e0d0;
+    color: #FFFF;
+    font-size: 16px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    color: #FFFF;
+    background-color: #0a91af;
+    border-color: #FFFF;
+}
+
+h3 {
+    font-size: 24px;
+}

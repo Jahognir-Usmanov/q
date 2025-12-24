@@ -1,0 +1,188 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #333;
+
+}
+
+h2 {
+    color: #555;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+footer nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Адаптивные стили */
+
+/* Для экранов шириной 768px и меньше */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    footer nav ul li {
+        display: block;
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 15px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 2em; /* Уменьшенный размер шрифта для экранов средних размеров */
+    }
+}
+
+/* Для экранов шириной 480px и меньше */
+@media (max-width: 480px) {
+    header {
+        padding: 10px;
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    main {
+        padding: 10px;
+        margin: 5px;
+    }
+
+        h1 {
+        font-size: 1.5em; /* Еще больше уменьшенный размер шрифта для мобильных устройств */
+    }
+}
+
+@media (max-width: 250px) {
+    header {
+        font-size: 0.8em; /* Уменьшенный размер шрифта для заголовка в хедере */
+    }
+
+    nav ul li {
+        display: block;
+        margin: 2px 0; /* Уменьшенные отступы для навигации */
+    }
+
+    main {
+        padding: 5px; /* Минимальные отступы для основного контента */
+        margin: 2px; /* Минимальные внешние отступы */
+    }
+
+    h1 {
+        font-size: 1.2em; /* Уменьшенный размер шрифта для заголовка */
+    }
+
+    h2 {
+        font-size: 1em; /* Уменьшенный размер шрифта для подзаголовков */
+    }
+}
+
+.breadcrumb {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+  }
+  
+  .breadcrumb-item {
+    margin-right: 0.5rem;
+  }
+  
+  .breadcrumb-item + .breadcrumb-item::before {
+    content: '/';
+    margin-right: 0.8rem;
+  }
+  
+  .breadcrumb-item a {
+    text-decoration: none;
+    color: #09f9e9;
+  }
+
+  .breadcrumb-item a:hover {
+    color: #068f86;
+    text-decoration: underline;
+  }
+
+  .breadcrumb-item.active {
+    color: #6c757d;
+  }
+
+  .screen_info_name {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+  }
